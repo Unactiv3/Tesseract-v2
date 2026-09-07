@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEADPIXEL // Study Hall</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="boot">
+  <div class="bootbox">
+    <div class="logo">DEADPIXEL</div>
+    <div class="bootline">STUDY HALL OPERATING ENVIRONMENT</div>
+    <div class="bootline" id="bootText">Initializing display driver...</div>
+    <div class="bar"><i id="bootBar"></i></div>
+    <div class="bootwarning" id="bootWarn"></div>
+    <div class="boothint">TIP: some pixels are not what they appear to be.</div>
+  </div>
+</section>
+<section id="jump"><div class="face">◉_◉</div><div class="jtext">DISPLAY CORRUPTION DETECTED</div></section>
+
+
+<div id="ambientNoise"></div>
+<div id="crackOverlay"></div>
+<div id="glitchFlash"></div>
+<div id="ghostMessage"></div>
+
+<div id="app">
+<header class="top">
+  <div class="brand">● DEADPIXEL // STUDY HALL</div>
+  <div class="status"><span><i class="dot"></i>SYSTEM ONLINE</span><span>PIXEL DAMAGE: <b id="damage">13%</b> <span style="opacity:.55">/ VISUAL ONLY</span></span><span id="clock">00:00</span></div>
+</header>
+<div id="notificationPanel">
+  <div class="eyebrow">SYSTEM NOTIFICATIONS</div>
+  <div class="notif">Focus session available — 25 min</div>
+  <div class="notif">New C Programming module unlocked</div>
+  <div class="notif">Pixel integrity remains stable ✓</div>
+</div>
+<div class="layout">
+<nav>
+  <div class="navlabel">NAVIGATION</div>
+  <button class="navbtn active" data-screen="dashboard">▣ DASHBOARD</button>
+  <button class="navbtn" data-screen="subjects">▤ SUBJECTS</button>
+  <button class="navbtn" data-screen="notes">▧ NOTES / LIBRARY</button>
+  <button class="navbtn" data-screen="focus">◷ FOCUS MODE</button>
+  <button class="navbtn" data-screen="ai">⌁ PIXEL AI</button>
+  <button class="navbtn" data-screen="lab">◈ PIXEL LAB</button>
+  <button class="navbtn" data-screen="settings">⚙ SETTINGS</button>
+</nav>
+
+<main>
+<section id="dashboard" class="screen active">
+  <div class="hero-row">
+    <div><div class="eyebrow">WELCOME BACK / USER_01</div><h1>Repair your knowledge.</h1></div>
+    <div class="hero-meta">LAST SESSION: 18 MIN AGO<br>STREAK: <span class="streak">06 DAYS</span></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="eyebrow">RESTORED</div><div class="num">68%</div><div class="progressline"><i style="width:68%"></i></div></div>
+    <div class="kpi"><div class="eyebrow">FOCUS TODAY</div><div class="num">01:42</div><div class="muted">hours / 03:00 goal</div></div>
+    <div class="kpi"><div class="eyebrow">TOPICS</div><div class="num">3 / 5</div><div class="muted">completed today</div></div>
+    <div class="kpi"><div class="eyebrow">PIXEL XP</div><div class="num">4,820</div><div class="muted">+320 this week</div></div>
+  </div>
+  <div class="grid">
+    <div class="panel big center">
+      <div class="eyebrow">KNOWLEDGE CORE</div>
+      <div class="ring"><span>68%</span></div>
+      <div class="muted">THE MORE YOU LEARN, THE LESS THE SCREEN BREAKS.</div>
+      <button class="action primary" onclick="showScreen('focus')">START FOCUS SESSION →</button>
+    </div>
+    <div class="panel side">
+      <div class="eyebrow">TODAY'S TASKS</div>
+      <div class="task-list" style="margin-top:12px">
+        <label class="task"><input type="checkbox" checked> Finish arrays notes</label>
+        <label class="task"><input type="checkbox"> Solve 5 pointer questions</label>
+        <label class="task"><input type="checkbox"> 25 min focus block</label>
+        <label class="task"><input type="checkbox"> Review recursion</label>
+      </div>
+    </div>
+    <div class="panel full"><div class="eyebrow">YOUR SUBJECTS</div><br><div class="subjects" id="dashSubjects"></div></div>
+  </div>
+  <div class="footer"><span>&gt; SYSTEM READY</span><span>LEARN / FOCUS / RESTORE</span></div>
+</section>
+
+<section id="subjects" class="screen">
+ <div class="eyebrow">KNOWLEDGE MATRIX / MODULES</div><h1>Subjects</h1>
+ <div class="grid">
+  <div class="panel full">
+   <div class="module-head"><span>ACTIVE MODULE: C PROGRAMMING</span><span class="tag">58% RESTORED</span></div>
+   <div class="tabs"><button class="active">CHAPTERS</button><button>NOTES</button><button>QUIZ</button><button>RESOURCES</button></div>
+   <div class="chapter"><span>◉ 01. Introduction</span><span class="done">✓ COMPLETED</span></div>
+   <div class="chapter"><span>◉ 02. Variables & Types</span><span class="done">✓ COMPLETED</span></div>
+   <div class="chapter"><span>◉ 03. Pointers</span><span class="current">IN PROGRESS →</span></div>
+   <div class="chapter"><span>◉ 04. Operators</span><span class="muted">LOCKED</span></div>
+   <div class="chapter"><span>◉ 05. Control Structures</span><span class="muted">LOCKED</span></div>
+   <div class="chapter"><span>◉ 06. Functions</span><span class="muted">LOCKED</span></div>
+  </div>
+  <div class="panel full"><div class="eyebrow">ALL SUBJECTS</div><br><div class="subjects" id="allSubjects"></div></div>
+ </div>
+</section>
+
+<section id="notes" class="screen">
+ <div class="eyebrow">ARCHIVE / RECOVERED FILES</div><h1>Notes & Library</h1>
+ <div class="grid">
+  <div class="panel big">
+   <div class="eyebrow">/DEADPIXEL/LIBRARY/C_PROGRAMMING</div><br>
+   <div class="file"><span>▸ pointers.exe</span><span class="corrupt">CORRUPTED</span></div>
+   <div class="file"><span>▸ arrays.dat</span><span>GOOD</span></div>
+   <div class="file"><span>▸ loops.corrupted</span><span class="corrupt">PARTIAL</span></div>
+   <div class="file"><span>▸ functions.sys</span><span>GOOD</span></div>
+   <div class="file"><span>▸ recursion.log</span><span>GOOD</span></div>
+   <button class="action" onclick="repairFile()">REPAIR SELECTED FILE</button>
+  </div>
+  <div class="panel side">
+   <div class="eyebrow">QUICK RESOURCES</div>
+   <div class="resource-grid" style="margin-top:12px">
+    <div class="resource"><h3>Cheat Sheets</h3><span class="muted">Syntax & quick references</span></div>
+    <div class="resource"><h3>Practice</h3><span class="muted">20 coding problems</span></div>
+    <div class="resource"><h3>Videos</h3><span class="muted">Curated explainers</span></div>
+    <div class="resource"><h3>Uploads</h3><span class="muted">Your own study files</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="focus" class="screen">
+ <div class="eyebrow">FOCUS ENVIRONMENT / DISTRACTIONS BLOCKED</div><h1>Focus Mode</h1>
+ <div class="focus-wrap">
+  <div class="focus-top"><div class="focus-stat"><span class="eyebrow">SESSION</span><br>C PROGRAMMING</div><div class="focus-stat"><span class="eyebrow">STREAK</span><br><span class="streak">06 DAYS</span></div></div>
+  <div class="panel center" style="margin-top:12px">
+   <div class="muted">POINTERS / 25 MINUTE BLOCK</div>
+   <div class="timer" id="timer">25:00</div>
+   <input class="range" id="focusRange" type="range" min="0" max="1500" value="1500">
+   <div class="muted" id="focusStatus">READY TO RESTORE PIXELS.</div>
+   <button class="action primary" id="timerBtn" onclick="toggleTimer()">START SESSION</button>
+   <button class="action" onclick="resetTimer()">RESET</button>
+  </div>
+  <div class="kpi-grid">
+   <div class="kpi"><div class="eyebrow">DISTRACTION</div><div class="num">08%</div></div>
+   <div class="kpi"><div class="eyebrow">FOCUS SCORE</div><div class="num">92</div></div>
+   <div class="kpi"><div class="eyebrow">PIXELS RESTORED</div><div class="num">+14</div></div>
+   <div class="kpi"><div class="eyebrow">NEXT BREAK</div><div class="num">25:00</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="ai" class="screen">
+ <div class="eyebrow">PIXEL_01 / EDUCATIONAL ASSISTANT</div><h1>Pixel AI</h1>
+ <div class="ai"><div><div class="avatar">◉</div><div class="muted" style="margin-top:8px">STATUS: ONLINE<br>MEMORY: 87%</div></div>
+ <div class="chat" id="chat">
+   <div class="bubble ai">PIXEL_01: Hello, human. What concept is currently refusing to enter your brain?</div>
+   <div class="bubble ai">Try asking me about C programming, Python, AI, or study tips.</div>
+   <div class="chatrow"><input id="aiInput" placeholder="Ask something..." onkeydown="if(event.key==='Enter')askAI()"><button onclick="askAI()">SEND</button></div>
+ </div></div>
+</section>
+
+<section id="lab" class="screen">
+ <div class="eyebrow">DISPLAY DIAGNOSTICS / MINI GAME</div><h1>Pixel Lab</h1>
+ <div class="panel center">
+   <p>FIND THE DEAD PIXEL</p><div class="muted">One pixel is defective. Click it.</div><br>
+   <div class="labgrid" id="labGrid"></div>
+   <div id="labResult" class="muted" style="margin-top:14px">DEAD PIXEL COUNT: 1</div>
+   <button class="action" onclick="newLab()">RESET GRID</button>
+ </div>
+</section>
+
+<section id="settings" class="screen">
+ <div class="eyebrow">SYSTEM CONFIGURATION</div><h1>Settings</h1>
+ <div class="settings-grid">
+  <div class="setting"><span>Ambient glitches</span><button class="switch on" onclick="this.classList.toggle('on')"><i></i></button></div>
+  <div class="setting"><span>Scanlines</span><button class="switch on" onclick="this.classList.toggle('on')"><i></i></button></div>
+  <div class="setting"><span>Study sounds</span><button class="switch" onclick="this.classList.toggle('on')"><i></i></button></div>
+  <div class="setting"><span>Reduced motion</span><button class="switch" onclick="this.classList.toggle('on');document.body.classList.toggle('reduced')"><i></i></button></div>
+ </div>
+ <div class="panel" style="margin-top:12px"><div class="eyebrow">DISPLAY DIAGNOSTICS</div><p class="muted">The interface can glitch, flicker and accumulate static, but core navigation always remains available.</p></div>
+</section>
+
+</main></div></div>
+<div class="mobilebar"><button class="active" data-screen="dashboard">⌂<br>HOME</button>
+<button data-screen="subjects">▦<br>SUBJECTS</button>
+<button data-screen="focus">◷<br>FOCUS</button>
+<button data-screen="ai">⌁<br>AI</button>
+<button data-screen="lab">◈<br>LAB</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
